@@ -1,2 +1,2 @@
-# openwrt_tweak
-Collection Off OpenWRT Tweak
+# Openwrt_Tweak
+Collection Off OpenWRT Tweak - By MSSVPN
