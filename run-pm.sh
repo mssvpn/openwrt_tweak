@@ -44,7 +44,7 @@ fi
 if pgrep -af TCP.json && pgrep -af UDP.json || pgrep -af TCP_UDP.json > /dev/null 2>&1; then
         echo "Passwall is Running!"
         echo "Check network outbound using CURL."
-                if curl --max-time 10 https://google.com -I > /dev/null 2>&1; then
+                if curl --max-time 60 https://google.com -I > /dev/null 2>&1; then
                     echo "CURL to Google Working Fine..."
                 else
                     echo "Curl error/timeout. Restart WAN Interface."
