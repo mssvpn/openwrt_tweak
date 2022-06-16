@@ -31,8 +31,8 @@ fi
 clear
 header
 printf " \e[1m%-5s\e[0m\n" "Your ISP:${ISP}"
-printf " \e[1m%-5s\e[0m\n" "Processing to hunt IP Range:
-113.210.x.x & 113.211.x.x"
+printf " \e[1m%-5s\e[0m\n" "Processing to hunt IP Range:"
+printf " \e[1m%-5s\e[0m\n" "113.210.x.x & 113.211.x.x"
 printf " \e[1m%-5s\e[0m\n" "(press Ctrl+C to cancel)..."
 echo
 printf " \e[1m%-5s \e[1m%-16s %10s\e[0m\n" "No." "IP Address" "Status"
@@ -41,7 +41,7 @@ while true; do
 publicIP=$(curl -s --user-agent "${UA_Browser}" -sL "https://api-ipv4.ip.sb/ip" --max-time 10 2>&1)
 if [[ ${publicIP} == 113.210* ]] || [[ ${publicIP} == 113.211* ]]; then
     printf " \e[1m%-5s \e[1m%-16s \e[1;32m%10s\e[0m\n" "$i)" "${publicIP}" "Success (IP range was found)"
-    printf " \e[1m%-5s\e[0m" "You can turn on VPN now."
+    printf " \e[1m%-5s\e[0m\n" "You can turn on VPN now."
     exit 0
 fi
 printf " \e[1m%-5s \e[1m%-16s \e[1;31m%10s\e[0m\n" "$i)" "${publicIP}" "Failed (IP not in range)"
