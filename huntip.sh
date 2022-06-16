@@ -38,7 +38,7 @@ printf " \e[1m%-5s \e[1m%-16s %10s\e[0m\n" "No." "IP Address" "Status"
 #echo
 while true; do
 publicIP=$(curl -s --user-agent "${UA_Browser}" -sL "https://api-ipv4.ip.sb/ip" --max-time 10 2>&1)
-if [[ ${HUNT_IP} == 113.211* ]]; then
+if [[ ${HUNT_IP} == 113.211* || 121.121* ]]; then
     printf " \e[1m%-5s \e[1m%-16s \e[1;32m%10s\e[0m\n" "$i)" "${publicIP}" "Success (IP range was found)"
     printf " \e[1m%-5s\e[0m" "You can turn on VPN now."
     exit 0
