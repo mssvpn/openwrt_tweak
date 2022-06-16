@@ -31,7 +31,8 @@ fi
 clear
 header
 printf " \e[1m%-5s\e[0m\n" "Your ISP:${ISP}"
-printf " \e[1m%-5s\e[0m\n" "Processing to hunt IP Range:113.210.x.x"
+printf " \e[1m%-5s\e[0m\n" "Processing to hunt IP Range:
+113.210.x.x & 113.211.x.x"
 printf " \e[1m%-5s\e[0m\n" "(press Ctrl+C to cancel)..."
 echo
 printf " \e[1m%-5s \e[1m%-16s %10s\e[0m\n" "No." "IP Address" "Status"
