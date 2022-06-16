@@ -40,7 +40,7 @@ while true; do
 publicIP=$(curl -s --user-agent "${UA_Browser}" -sL "https://api-ipv4.ip.sb/ip" --max-time 10 2>&1)
 if [[ ${publicIP} == 113.211* ]]; then
     printf " \e[1m%-5s \e[1m%-16s \e[1;32m%10s\e[0m\n" "$i)" "${publicIP}" "Success (IP range was found)"
-    printf " \e[1m%-5s\e[0m" "You can turn on VPN now."
+    printf " \e[1m%-5s\e[0m\n" "You can turn on VPN now."
     exit 0
 fi
 printf " \e[1m%-5s \e[1m%-16s \e[1;31m%10s\e[0m\n" "$i)" "${publicIP}" "Failed (IP not in range)"
