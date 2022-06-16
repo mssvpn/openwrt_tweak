@@ -11,7 +11,7 @@ echo '
  |       |.-----.-----.-----.|  |  |  |.----.|  |_
  |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
  |_______||   __|_____|__|__||________||__|  |____|
-          |__| M S S V P N - HUNT IP Maxis V.1.2
+          |__| M S S V P N - HUNT IP Maxis V.1.3
  -----------------------------------------------------
    Source AutoScript by Abi Darwish t.me/Abi_Darwish
     Modded OpenWRT HuntIP by MSSVPN t.me/mssvpn_hq
