@@ -43,9 +43,8 @@ if [[ ${HUNT_IP} == 113.211* ]]; then
     printf " \e[1m%-5s\e[0m" "You can turn on VPN now."
     exit 0
 fi
-sleep 0.5
 printf " \e[1m%-5s \e[1m%-16s \e[1;31m%10s\e[0m\n" "$i)" "${publicIP}" "Failed (IP not in range)"
-sleep 0.5
+sleep 1
 curl -s -o /dev/null --max-time 10 http://192.168.8.1:8989/cgi-bin/changeip.cgi
 sleep 15
 i=$(( $i + 1 ))
