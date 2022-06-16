@@ -24,7 +24,7 @@ printf "\n \e[1m%-10s\e[0m\n" "Initializing..."
 sleep 3
 #Check AIO
 if ! ping -c 1 192.168.8.1:8989 > /dev/null 2>&1; then
-    printf "\e[31;1m%-5s\e[0m" "AIO is not installed. Exit..."
+    printf "\e[31;1m%-5s\e[0m\n" "AIO is not installed. Exit..."
     sleep 2
     exit 1
 fi
