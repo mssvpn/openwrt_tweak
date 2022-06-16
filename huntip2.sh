@@ -1,7 +1,7 @@
 #!/bin/sh
 #script by Abi Darwish https://t.me/Abi_Darwish Modded for OpenWRT by MSSVPN
 UA_Browser="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36";
-HUNT_IP=$(curl -s --user-agent "${UA_Browser}" -sL "https://api-ipv4.ip.sb/ip" --max-time 10 2>&1)
+#HUNT_IP=$(curl -s --user-agent "${UA_Browser}" -sL "https://api-ipv4.ip.sb/ip" --max-time 10 2>&1)
 ISP=$(curl --max-time 30 -s --user-agent "${UA_Browser}" "https://api.ip.sb/geoip/${HUNT_IP}" | cut -f1 -d"," | cut -f4 -d '"')
 set -e
 set -o pipefail
@@ -38,7 +38,7 @@ printf " \e[1m%-5s \e[1m%-16s %10s\e[0m\n" "No." "IP Address" "Status"
 #echo
 while true; do
 publicIP=$(curl -s --user-agent "${UA_Browser}" -sL "https://api-ipv4.ip.sb/ip" --max-time 10 2>&1)
-if [[ ${HUNT_IP} == 113.210* ]]; then
+if [[ ${publicIP} == 113.210* || 113.211* ]]; then
     printf " \e[1m%-5s \e[1m%-16s \e[1;32m%10s\e[0m\n" "$i)" "${publicIP}" "Success (IP range was found)"
     printf " \e[1m%-5s\e[0m" "You can turn on VPN now."
     exit 0
